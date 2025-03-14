@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Dish</title>
+</head>
+<body>
+    <h1>Add a New Dish</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="Dish Name" required>
+        <button type="submit">Add Dish</button>
+    </form>
+    <p><a href="{% url 'home' %}">Back to Home</a></p>
+</body>
+</html>

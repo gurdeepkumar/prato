@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Dish - Prato</title>
+</head>
+<body>
+    <h1>Edit Dish</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <input type="text" name="name" value="{{ dish.name }}" required>
+        <button type="submit">Update Dish</button>
+    </form>
+    <p><a href="{% url 'dish_list' %}">Back to List</a></p>
+</body>
+</html>
